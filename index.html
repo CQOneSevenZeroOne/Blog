@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<header>
+		<div class="logo"><img src="./images/logo.png" alt=""></div>
+		<div class="theme">
+			<p>Jason's Blog</p>
+			<span>H5/PHP/java/linux学习交流</span>
+		</div>
+		<div class="nav">
+			<ul>
+				<li >
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">html5/css</a>
+				</li>
+				<li>
+					<a href="#">分享</a>
+				</li>
+				<li>
+					<a href="#">IT资讯</a>
+				</li>
+				<li>
+					<a href="#">心得笔记</a>
+				</li>
+				<li>
+					<a href="#">微博</a>
+				</li>
+				<li class="github">
+					<a href="#">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<!-- 文章部分 -->
+	<section>
+		<div class="container_l">
+			<div class="artical">
+				<div class="img_box"><img src="./images/11.jpg" alt=""></div>
+				<?php 
+				require(db.php);
+				
+				?>
+				<div class="title">HTTP 206 获取文件部分内容和范围请求
+					<p class="tags">tag:技术 协议 网页</p></div>		
+				<div class="content">HTTP/1.1 200 OK 是 HTTP 请求成功后的标准响应，当你在浏览器中打开某个网站后,你通常会得到一个 200 状态码。HTTP/1.1 206 状态码表示的是“客户端通过发送范围请求头Range抓取到了资源的部分数据” 这种请求通常用来...</div>
+				<ul>
+					<li class="author"><a href="">Jason</a></li>
+					<li class="skim"><a href="">2031</a></li>
+					<li class="comment"><a href="">58</a></li>
+					<li class="favor"><a href="">32喜欢</a></li>
+					<li class="time"><a href="">2017-3-2 12:00</a></li>
+				</ul>
+			</div>
+			<div class="artical">
+				<div class="img_box"><img src="./images/11.jpg" alt=""></div>
+				<div class="title">HTTP 206 获取文件部分内容和范围请求
+					<p class="tags">tag:技术 协议 网页</p></div>		
+				<div class="content">HTTP/1.1 200 OK 是 HTTP 请求成功后的标准响应，当你在浏览器中打开某个网站后,你通常会得到一个 200 状态码。HTTP/1.1 206 状态码表示的是“客户端通过发送范围请求头Range抓取到了资源的部分数据” 这种请求通常用来...</div>
+				<ul>
+					<li class="author"><a href="">Jason</a></li>
+					<li class="skim"><a href="">2031</a></li>
+					<li class="comment"><a href="">58</a></li>
+					<li class="favor"><a href="">32喜欢</a></li>
+					<li class="time"><a href="">2017-3-2 12:00</a></li>
+				</ul>
+			</div>
+			<div class="artical">
+				<div class="img_box"><img src="./images/11.jpg" alt=""></div>
+				<div class="title">HTTP 206 获取文件部分内容和范围请求
+					<p class="tags">tag:技术 协议 网页</p></div>		
+				<div class="content">HTTP/1.1 200 OK 是 HTTP 请求成功后的标准响应，当你在浏览器中打开某个网站后,你通常会得到一个 200 状态码。HTTP/1.1 206 状态码表示的是“客户端通过发送范围请求头Range抓取到了资源的部分数据” 这种请求通常用来...</div>
+				<ul>
+					<li class="author"><a href="">Jason</a></li>
+					<li class="skim"><a href="">2031</a></li>
+					<li class="comment"><a href="">58</a></li>
+					<li class="favor"><a href="">32喜欢</a></li>
+					<li class="time"><a href="">2017-3-2 12:00</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="container_r">
+			<div class="searchbox">
+				<input type="text" placeholder="请输入关键字"/>
+				<button>立即搜索</button>
+			</div>
+			<div class="list">
+				<a href="">栏目列表</a>
+				<a href="">文章列表</a>
+				<a href="">发布文章</a>
+			</div>
+		</div>
+	</section>
+
+	
+</body>
+</html>

@@ -1,0 +1,62 @@
+/*特殊元素去边框*/
+body{margin:0;background: url(../images/yingshi.png) no-repeat;background-size:cover;background-attachment:fixed;}
+p{margin:0;}
+ul{
+	margin: 0;
+	padding: 0;
+}
+/*header部分*/
+header{width:1200px;height:100px;margin:0 auto;/*border:1px solid red;*/}
+.logo{width: 80px;height: 100px;/*border:1px solid blue;*/margin-left: 30px;float: left;}
+.theme{width: 300px;height: 80px;float: left;}
+header p{float: left;margin: 20px 20px 0 20px;font-size: 28px;}
+header span{margin-left:20px;font-size: 12px;}
+.nav{overflow: hidden;}
+header ul{margin:0;padding:0;float: right;}
+header ul li{width:105px;list-style: none;float: left;text-align: center;transition: 0.2s}
+header ul li a{text-decoration: none;color: black;margin:8px;line-height: 100px;transition: 0.2s}
+.github{background: rgba(31,236,123,0.4);border-radius: 0 50px 0 50px;}
+.github a{font-size: 20px;color: #fff;}
+header li:hover{background: rgba(31,236,123,0.4);border-radius: 0 50px 0 50px;}
+header li:hover a{font-size: 20px;color: #fff;}
+/*文章内容*/
+section{width: 1200px;margin: 0 auto;overflow: hidden;}
+.container_l{width: 850px;overflow: hidden;float: left;}
+.artical{width: 800px;height: 240px;/*border: 1px solid black;*/float: left;margin: 10px;background: #fff;box-shadow: 10px 10px 5px #888888;opacity:0.95;}
+.img_box{width: 200px;height: 200px;float: left;border:2px solid gray;margin: 15px 0 0 20px;overflow: hidden;box-shadow: 5px 5px 2px #888888;}
+.title{width: 550px;height:50px;/*border: 1px solid red;*/float: left; margin: 15px 0 10px 20px;}
+.title p{font-size: 12px;color: gray;border-bottom: 1px dashed gray;padding-bottom: 5px;}
+.content{width:550px;height:80px;text-indent: 28px; /*border:1px solid red;*/float: left;margin-left: 20px;font-size: 14px;color:gray;}
+.container_l ul{float: right;/*border:1px solid red;*/width: 500px;margin-top: 30px;overflow: hidden;}
+.container_l ul li{list-style: none;float: left;width: 19%;height:32px;/*border:1px solid red;*//*text-align: center;*/}
+.container_l ul li a{color:gray;font-size: 12px;line-height: 32px;text-decoration: none;margin-left: 36px;}
+.author{background: url(../images/author.png) no-repeat left center;}
+.skim{background: url(../images/skim.png) no-repeat left center;}
+.comment{background: url(../images/comment.png) no-repeat left center;}
+.favor{background: url(../images/favor.png) no-repeat left center;}
+.container_l .time a{margin-left: 0;}
+.artical:hover img{transform: scale(1.2);transition: 0.8s;}
+/*右边栏目*/
+.container_r{width: 340px;height: 400px;float: right;padding-left: 10px;}
+.searchbox{width: 330px;margin: 10px;overflow: hidden;}
+.searchbox input{width: 220px;height: 35px;font-size: 16px;float: left;outline: none;padding-left: 5px;}
+.searchbox button{width: 70px;height: 40px;background: purple;float: left;color:#fff;outline: none;}
+.list a{display: block;height: 40px;opacity: 0.3;text-decoration: none;font:16px/40px arial;color: #ccc;background: black;border-bottom: 1px dashed blue
+;padding-left: 10px;margin-left: 10px;width: 290px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

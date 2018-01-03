@@ -1,0 +1,30 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "team work for blog",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CQOneSevenZeroOne/Blog.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "abcd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CQOneSevenZeroOne/Blog/issues"
+  },
+  "homepage": "https://github.com/CQOneSevenZeroOne/Blog#readme"
+}

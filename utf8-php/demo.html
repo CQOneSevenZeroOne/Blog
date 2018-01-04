@@ -49,8 +49,9 @@
 <section>
 	<div class="container_l">
 		<div class="title">
-			<p>文章标题：<input type="text" /></p>
-			<p>作者：<input type="text" /></p>
+			<p>文章标题：<input type="text" id="title"/></p>
+			<p>栏目类别：<input type="text" id="type"></p>
+			<p>作者：<input type="text" id="autor"/></p>
 		</div>
 		<div>
 			<script id="editor" type="text/plain" style="width:850px;min-height:400px;"></script>
@@ -59,7 +60,7 @@
 		<script>
 				var ue = UE.getEditor('editor');
 		</script>
-		<div class="send"><p>发布</p></div>
+		<div class="send"><button onclick="getContent()">获得内容</button></div>
 	</div>
 	<div class="container_r">
 			<div class="searchbox">
@@ -73,6 +74,7 @@
 			</div>
 		</div>
 </section>
-	</body>
-
+</body>
 </html>
+<script src="../public/js/lib/jquery-1.11.3.js"></script>
+<script src="../submit.js"></script>

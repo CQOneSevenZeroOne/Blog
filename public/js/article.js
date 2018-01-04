@@ -98,6 +98,32 @@ $.ajax({
             <span>${item.usrname} <font color ="#000">:说</font></span>
             <p>${item.comment}</p>
             <div class="datetime">
+                <p class="date">${item.ptime}<span class= "clipro ding"></span><span class= "clipro cai"></span><span class= "clipro respon">回复</span></p>
+            </div>
+        </li>
+            `
+        }).join("");
+    
+        $(".mbc").html(html);
+
+    }
+})
+var urlartid = location.href;
+console.log(urlartid.split("?")[1].split("=")[1])
+$.ajax({
+    type:"post",
+    url: "http://10.40.153.111:9999/showArtical",
+    data:{
+        
+    },
+    success:function(data){
+        console.log(data)
+        var html = data.map(function(item){
+            return `
+            <li>
+            <span>${item.usrname} <font color ="#000">:说</font></span>
+            <p>${item.comment}</p>
+            <div class="datetime">
                 <p class="date">${item.ptime}<span><img src="" alt=""></span></p>
             </div>
         </li>
@@ -105,6 +131,24 @@ $.ajax({
         }).join("");
     
         $(".mbc").html(html);
+
+        $(".clipro").on("click",function(){
+      
+            if($(this).hasClass("cai")){
+                $(this).css({
+                    "background-position-x":"-28px",
+                     "background-position-y":"2px"
+    
+                })
+                
+            }else if($(this).hasClass("ding")){
+                $(this).css({
+                    "background-position-x":"-31px",
+                     "background-position-y":"-27px"
+    
+                })
+            }
+            })
 
     }
 })

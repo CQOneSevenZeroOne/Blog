@@ -22,7 +22,7 @@ module.exports = function(app){
 	//根据问文章id查询文章
 	app.post("/showArtical",function(req,res){
 		res.append("Access-Control-Allow-Origin","*");
-		var sql = `select * from article where id=${req.body.id}`;
+		var sql = `select title,contt,author,clicknum,commentnum,DATE_FORMAT(ptime,'%Y-%m-%d %H:%i:%S')as time from article where id=${req.body.id}`;
 		conn.query(sql,function(err,rs){
 			if(err) console.log(err.message);
 			else{

@@ -121,26 +121,26 @@
         if(countval!=''&&emialval!=''){
             $.ajax({
                url:" http://10.40.153.111:9999/addComm",
-               type:"psot",
+               type:"post",
                data:{
                    usrname:countval,
                    comment:textval
                },
-               success:function(data){
-                   console.log(data)
-                    var date = new Date();
-                    var html = data.map(function(item){
-                      return  ` <li>
-                                    <span>${item.name}  :说</span>
-                                    <p>${item.messg}</p>
-                                    <div class="datetime">
-                                        <p class="date">${date.getFullYear()+'年'+date.getMonth()+'月'+date.getDate()+'日'}<span><img src="" alt=""></span></p>
-                                    </div>
-                                </li>
-                        `
-                    }).join("")
+            //    success:function(data){
+            //        console.log(data)
+            //         var date = new Date();
+            //         var html = data.map(function(item){
+            //           return  ` <li>
+            //                         <span>${item.name}  :说</span>
+            //                         <p>${item.messg}</p>
+            //                         <div class="datetime">
+            //                             <p class="date">${date.getFullYear()+'年'+date.getMonth()+'月'+date.getDate()+'日'}<span><img src="" alt=""></span></p>
+            //                         </div>
+            //                     </li>
+            //             `
+            //         }).join("")
                 
-                }
+            //     }
             })
         }
     }

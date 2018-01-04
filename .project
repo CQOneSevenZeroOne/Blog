@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
+	<name>blogplus</name>
+=======
 	<name>Blog</name>
+>>>>>>> 56538e21f3995b2e6a830cd3f21cd1e5a7c7d4e5
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +20,11 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
+			<id>1514950570681</id>
+=======
 			<id>1514959659069</id>
+>>>>>>> 56538e21f3995b2e6a830cd3f21cd1e5a7c7d4e5
 			<name></name>
 			<type>26</type>
 			<matcher>

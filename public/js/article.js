@@ -12,8 +12,7 @@ Date.prototype.format = function(fmt) { //author: meizz
     if(/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
     for(var k in o)
         if(new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-       
-        return fmt;
+    return fmt;
 }
 var bt2;
 var bt1;
@@ -36,7 +35,7 @@ $("#email").blur(function() {
          bt2 =false;
 
     }else{
-        $(".errore").html("")
+        $(".errorc").html("")
         bt2 =true;
     }
 })
@@ -99,40 +98,13 @@ $.ajax({
             <span>${item.usrname} <font color ="#000">:说</font></span>
             <p>${item.comment}</p>
             <div class="datetime">
-                <p class="date">${item.ptime}<span class= "clipro ding"></span><span class= "clipro cai"></span><span class= "clipro respon">回复</span></p>
+                <p class="date">${item.ptime}<span><img src="" alt=""></span></p>
             </div>
         </li>
             `
         }).join("");
     
         $(".mbc").html(html);
-        //点赞回复
-
-        $(".clipro").on("click",function(){
-      
-        if($(this).hasClass("cai")){
-            $(this).css({
-                "background-position-x":"-28px",
-                 "background-position-y":"2px"
-
-            })
-            
-        }else if($(this).hasClass("ding")){
-            $(this).css({
-                "background-position-x":"-31px",
-                 "background-position-y":"-27px"
-
-            })
-        }
-        })
 
     }
-})
-//点赞回复
-
-$(".clipro").on("click",function(){
-    console.log(2)
-   if($(this).hasClass("cai")){
-       console.log(1)
-   }
 })

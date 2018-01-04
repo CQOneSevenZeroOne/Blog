@@ -5,17 +5,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 
-app.use(express.static('public'));
-app.use(express.static('lib/utf8-php'));
+app.use(express.static(__dirname+'/public'));
+app.use(express.static(__dirname+'/plug/ueditor'));
 
-//app.get('/',function(req,res){
-//	app.
-//})
-
-app.post("/addComm",function(req,res){
-	res.append("Access-Control-Allow-Origin","*");
-	res.send("ok");	
+require("./routes/addComment.js")(app);
+require("./routes/addArticle.js")(app);
+app.get("/public",function(req,res){
+	res.sendFile(__dirname+"/plug/ueditor/demo.html");
 })
+
 app.listen(9999);
 module.exports = app;
 

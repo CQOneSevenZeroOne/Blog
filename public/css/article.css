@@ -37,7 +37,7 @@ section{width: 1200px;margin: 0 auto;overflow: hidden;}
 
 
 		
-			
+			/* 评论内容 */
 			.mbc {
 				width: 800px;
 				margin: 0 auto;
@@ -46,18 +46,20 @@ section{width: 1200px;margin: 0 auto;overflow: hidden;}
 			.mbc li {
 				list-style: none;
 				margin: 20px;
-				border-bottom: 2px solid rgb(89, 87, 90);
+				border-bottom: 2px solid rgb(197, 197, 197);
 				overflow: hidden;
 			}
 			
 			.mbc li>span {
-				font-size: 16px;
+				font-size: 20px;
 				line-break: 24px;
 				color: aquamarine;
+				display: inline-block;
+				margin: 15px;
 			}
 			
 			.mbc li>p {
-				font-size: 12px;
+				font-size: 16px;
 				line-height: 20px;
 			}
 			
@@ -67,11 +69,34 @@ section{width: 1200px;margin: 0 auto;overflow: hidden;}
 				line-height: 20px;
 				font-size: 14px;
 			}
-			
+			/* 点赞样式 */
+			.mbc .clipro{
+				display: inline-block;
+				width: 24px;
+				height:26px;
+				margin: 0 10px;
+				vertical-align: bottom;
+				overflow: hidden;
+				
+			}
+			.mbc .ding{
+				background: url("../images/dz.png") no-repeat -4px 0 ;
+			}
+			.mbc .cai{
+				background: url("../images/dz.png") no-repeat 0px -23px ;
+			}
+			.mbc .respon{
+				display: inline;
+
+			}
+			.mbc .respon:hover{
+				color: orange;
+			}
+			/* 发表评论区 */
 			.mb {
 				width: 800px;
 				margin: 0 auto;
-				
+				padding: 20px 0;
 				overflow: hidden;
 				position: relative;
 			}
@@ -80,9 +105,18 @@ section{width: 1200px;margin: 0 auto;overflow: hidden;}
 				font-size: 24px;
 				line-height: 30px;
 				width: 800px;
+				color: cadetblue;
+				margin: 20px 0;
 				border-bottom: 1px solid rgb(184, 160, 160);
 			}
-			
+			.mb>p{
+				line-height: 30px;
+			}
+			/* 邮箱输入错误提示 */
+			.mb .errorc, .errore{
+				color: red;
+			}
+			/* 评论文本域 */
 			#massage {
 				width: 600px;
 				min-height: 50PX;
@@ -93,13 +127,14 @@ section{width: 1200px;margin: 0 auto;overflow: hidden;}
 			.mb input {
 				margin: 10px 10px;
 			}
-			
+			/* 发表按钮 */
 			#pub {
 				float: right;
 				width: 50px;
 				height: 30px;
 				margin-right: 200px;
 			}
+			/* 弹出成功提示 */
 			.alertc{
 				position: absolute;
 				top: 0;

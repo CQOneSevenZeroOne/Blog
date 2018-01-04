@@ -35,7 +35,7 @@ $("#email").blur(function() {
          bt2 =false;
 
     }else{
-        $(".errorc").html("")
+        $(".errore").html("")
         bt2 =true;
     }
 })
@@ -54,7 +54,7 @@ function publish() {
             type: "post",
             data: {
                 usrname: countval,
-                artid: 1,
+                artid: urlartid,
                 comment: textval,
                 email: emialval,
                 ptime: time
@@ -82,13 +82,13 @@ function publish() {
         })
     }
 }
-
+var urlartid = location.href.split("?")[1].split("=")[1];
 //刷新页面加载数据库的评论
 $.ajax({
     type:"post",
     url: "http://10.40.153.111:9999/showComm",
     data:{
-        artid:1
+        artid:urlartid
     },
     success:function(data){
         console.log(data)
@@ -103,52 +103,49 @@ $.ajax({
         </li>
             `
         }).join("");
-    
+        console.log(html)
         $(".mbc").html(html);
-
-    }
-})
-var urlartid = location.href;
-console.log(urlartid.split("?")[1].split("=")[1])
-$.ajax({
-    type:"post",
-    url: "http://10.40.153.111:9999/showArtical",
-    data:{
-        
-    },
-    success:function(data){
-        console.log(data)
-        var html = data.map(function(item){
-            return `
-            <li>
-            <span>${item.usrname} <font color ="#000">:说</font></span>
-            <p>${item.comment}</p>
-            <div class="datetime">
-                <p class="date">${item.ptime}<span><img src="" alt=""></span></p>
-            </div>
-        </li>
-            `
-        }).join("");
-    
-        $(".mbc").html(html);
-
         $(".clipro").on("click",function(){
       
             if($(this).hasClass("cai")){
                 $(this).css({
                     "background-position-x":"-28px",
                      "background-position-y":"2px"
-    
+        
                 })
                 
             }else if($(this).hasClass("ding")){
                 $(this).css({
                     "background-position-x":"-31px",
                      "background-position-y":"-27px"
-    
+        
                 })
             }
             })
+        
 
     }
 })
+//发送文章请求,获取文章内容
+var urlartid = location.href.split("?")[1].split("=")[1];
+console.log(urlartid);
+
+$.ajax({
+    type:"post",
+    url: "http://10.40.153.111:9999/showArtical",
+    data:{
+        id:urlartid
+    },
+    success:function(data){
+        console.log(data[0])
+        
+     $(".artical_title").html(data[0].title);
+     $(".artical_time").html(data[0].time)
+     $(".artical_author").html(data[0].author)
+     $(".content").html(data[0].contt) 
+
+        
+
+    }
+})
+

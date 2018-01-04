@@ -11,8 +11,11 @@ app.use(express.static('lib/utf8-php'));
 //app.get('/',function(req,res){
 //	app.
 //})
-require("./addComment.js")(app);
 
+app.post("/addComm",function(req,res){
+	res.append("Access-Control-Allow-Origin","*");
+	res.send("ok");	
+})
 app.listen(9999);
 module.exports = app;
 

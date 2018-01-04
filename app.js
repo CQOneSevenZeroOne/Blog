@@ -12,6 +12,7 @@ app.use(express.static('lib/utf8-php'));
 //	app.
 //})
 require("./addComment.js")(app);
+require("./addArticle.js")(app);
 
 app.listen(9999);
 module.exports = app;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<script type="text/javascript" charset="utf-8" src="ueditor.config.js"></script>
+		<script type="text/javascript" charset="utf-8" src="ueditor.all.min.js"></script>
+		<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+		<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+		<script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
+		<script src="jquery.js"></script>
+		<link rel="stylesheet" href="css/home.css?2">
+	</head>
+
+	<body>
+		<!-- 头部 -->
+	<header>
+		<div class="logo"><img src="images/logo.png" alt=""></div>
+		<div class="theme">
+			<p>Learning Blog</p>
+			<span>H5/PHP/java/linux学习交流</span>
+		</div>
+		<div class="nav">
+			<ul>
+				<li >
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">html5/css</a>
+				</li>
+				<li>
+					<a href="#">分享</a>
+				</li>
+				<li>
+					<a href="#">IT资讯</a>
+				</li>
+				<li>
+					<a href="#">心得笔记</a>
+				</li>
+				<li>
+					<a href="#">微博</a>
+				</li>
+				<li class="github">
+					<a href="#">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+<section>
+	
+	<div class="container_l" style="margin-top:30px;">
+		<p class="info" style="margin-bottom: 20px;">
+			文章标题：<input type="text" id="title"/>
+			栏目类别：<input type="text" id="type">
+			作者：<input type="text" id="autor"/>
+		</p>
+		<div>
+			<script id="editor" type="text/plain" style="width:850px;min-height:400px;"></script>
+		</div>
+		
+		<script>
+				var ue = UE.getEditor('editor');
+		</script>
+		<div class="send"><button onclick="getContent()">发布文章</button></div>
+	</div>
+	<div class="container_r" style="margin-top: 30px;">
+			<div class="searchbox">
+				<input type="text" placeholder="请输入关键字"/>
+				<button>立即搜索</button>
+			</div>
+			<div class="list">
+				<a href="">栏目列表</a>
+				<a href="">文章列表</a>
+				<a href="">发布文章</a>
+			</div>
+		</div>
+</section>
+</body>
+</html>
+<script src="./submit.js"></script>

@@ -1,6 +1,7 @@
 
 function getContent() {
     var contVal = UE.getEditor('editor').getContent();
+    var contTxt = UE.getEditor('editor').getContentTxt();
     //获取内容以后向服务器请求
     if($("#title").val()!=''&&$("#autor").val()!=''&&$("#type").val()!=''&&contVal!=''){
         var titleVal = $("#title").val();
@@ -21,7 +22,8 @@ function getContent() {
                 cont:contVal,
                 author:autorVal,
                 ptime:time,
-                catname:typeVal   
+                catname:typeVal,
+                contt:contTxt
             },
             success:function(data){
                 console.log(data);

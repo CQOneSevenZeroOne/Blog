@@ -17,8 +17,9 @@ module.exports = function(app) {
 	})
 	//根据文章id传所有评论至前端页面
 	app.post("/showComm", function(req, res) {
+		console.log(req.ip);
 		res.append("Access-Control-Allow-Origin","*");
-		var sql = `select * from comm where artid =${req.body.artid}`;
+		var sql = `select DATE_FORMAT(ptime,'%Y-%m-%d %H:%i:%S')as ptime,usrname,comment,email from comm where artid =${req.body.artid}`;
 		conn.query(sql,function(err,rs){
 			if(err) res.send(err.message);
 			else{res.send(rs);}

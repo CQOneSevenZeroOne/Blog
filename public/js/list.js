@@ -6,7 +6,7 @@ $.ajax({
         var html = [];
         var str= '';
         for(i in data){
-            str = `<a href="http://localhost:88/blogss/public/html/article.html?id=${data[i].id}"><div class="artical">
+            str = `<a href="http://localhost:9999/article.html?id=${data[i].id}"><div class="artical">
             <div class="title">
                 <p id="title">${data[i].title}</p>
             </div>		

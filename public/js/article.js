@@ -86,7 +86,7 @@ var urlartid = location.href.split("?")[1].split("=")[1];
 //刷新页面加载数据库的评论
 $.ajax({
     type:"post",
-    url: "http://10.40.153.111:9999/showComm",
+    url: "http://localhost:9999/showComm",
     data:{
         artid:urlartid
     },
@@ -140,12 +140,13 @@ $.ajax({
         console.log(data[0])
         
      $(".artical_title").html(data[0].title);
-     $(".artical_time").html(data[0].time)
-     $(".artical_author").html(data[0].author)
-     $(".content").html(data[0].contt) 
+     $(".artical_time").html(data[0].time);
+     $(".artical_author").html(data[0].author);
+     $(".content").html(data[0].cont);
 
         
 
     }
 })
+
 

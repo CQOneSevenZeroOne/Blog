@@ -50,6 +50,9 @@ section{width: 1200px;margin: 0 auto;overflow: hidden;}
 .searchbox button{width: 70px;height: 40px;background: purple;float: left;color:#fff;outline: none;}
 .list a{display: block;height: 40px;opacity: 0.3;text-decoration: none;font:16px/40px arial;color: #ccc;background: black;border-bottom: 1px dashed blue
 ;padding-left: 10px;margin-left: 10px;width: 290px;}
+.list a{display: block;height: 40px;opacity: 0.3;text-decoration: none;font:16px/40px arial;color: #ccc;background: black;border-bottom: 1px dashed blue;padding-left: 10px;margin-left: 10px;width: 290px;}
+.list a:hover{background: rgba(225,0,0,0.6)}
+.list a:nth-of-type(2){background: rgba(225,0,0,0.6)}
 
 
 

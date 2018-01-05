@@ -1,4 +1,3 @@
-
 function getContent() {
     var contVal = UE.getEditor('editor').getContent();
     var contTxt = UE.getEditor('editor').getContentTxt();
@@ -31,8 +30,7 @@ function getContent() {
         })
     }else{
         alert("内容不能为空");    
-    }
-    
+    }  
 }
 
 

@@ -46,8 +46,11 @@ function publish() {
     var emialval = $("#email").val();
     var textval = $("#massage").val();
     var time = new Date().format("yyyy-MM-dd hh:mm:ss");
-    console.log(bt1,bt2);
-
+   
+    if(textval == ''){
+        $(".alertc").html("发表文章内容不能为空")
+    }
+    
     if(bt1 && bt2) {
         $.ajax({
             url: "http://10.40.153.111:9999/addComm",
@@ -71,18 +74,22 @@ function publish() {
         </li>
                 `
                 $(".mbc").append(html);
-                $(".alertc").fadeToggle("slow","linear",function(){
-                         setTimeout(() => {
-                            $(".alertc").fadeToggle("slow","linear")	
-                        }, 1000);
-                })
+                $(".alertc").html("发表成功")
                 
                 
             }
         })
+    }else{
+        $(".alertc").html("你的用户名或邮箱输入有误!请重新输入!")
     }
+    $(".alertc").fadeToggle("slow","linear",function(){
+        setTimeout(() => {
+           $(".alertc").fadeToggle("slow","linear")	
+       }, 1000);
+})
 }
-var urlartid = location.href.split("?")[1].split("=")[1];
+var urlartid = location.href.split("?")[1].split("=")[1];//本页面文章iD
+
 //刷新页面加载数据库的评论
 $.ajax({
     type:"post",
@@ -103,7 +110,7 @@ $.ajax({
         </li>
             `
         }).join("");
-        console.log(html)
+        //console.log(html)
         $(".mbc").html(html);
         $(".clipro").on("click",function(){
       
@@ -127,8 +134,8 @@ $.ajax({
     }
 })
 //发送文章请求,获取文章内容
-var urlartid = location.href.split("?")[1].split("=")[1];
-console.log(urlartid);
+
+
 
 $.ajax({
     type:"post",
@@ -137,7 +144,7 @@ $.ajax({
         id:urlartid
     },
     success:function(data){
-        console.log(data[0])
+       
         
      $(".artical_title").html(data[0].title);
      $(".artical_time").html(data[0].time);

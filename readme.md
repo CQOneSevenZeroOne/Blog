@@ -11,14 +11,27 @@
  * **mysql -5.7.20**
 
 ### 项目目录
-
-|-app.js 项目入口文件  
-|-routes 路由目录  
-|-public 静态资源    
-|-plug   插件  
-|-config 配置文件  
-|-sql 建表  
-|-package.json 项目信息
+```
+├── blog
+    │  ├── app.js 入口文件
+    │  │
+    │  ├── routes 路由目录
+    │  │   
+    │  ├── plug 插件
+    │  │   └── Ueditor
+    │  │
+    │  ├── public 静态资源文件
+    │  │   ├── js
+    │  │   ├── css
+    │  │   └── images
+    │  │
+    │  ├── config 配置目录
+    │  │   └── db.js 配置数据库信息
+    │  │
+    │  ├── package.json 依赖模块信息
+    │  │
+    └───── readme.md
+```
 
 ### 项目运行
 

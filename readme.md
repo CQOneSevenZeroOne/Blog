@@ -36,8 +36,9 @@
 ### 项目运行
 
 1. 配置nodejs开发环境
-2. 在项目目录执行`node app`
-3. 访问"localhost:9999" 即进入博客首页
+2. 在项目目录执行`node install`安装依赖模块
+3. 在项目目录执行`node app`开启服务
+4. 访问"localhost:9999" 即进入博客首页
 
 
 

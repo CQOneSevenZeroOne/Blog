@@ -9,8 +9,15 @@ module.exports = function(app) {
 	app.post("/addComm", function(req, res) {
 		res.append("Access-Control-Allow-Origin","*");
 		console.log(req.body);
-		var sql = `insert into comm values("","${req.body.usrname}","${req.body.comment}","${req.body.artid}","${req.body.email}","${req.body.ptime}")`;
-		conn.query(sql,function(err,rs){
+		var post = {
+			usrname:req.body.usrname,
+			comment:req.body.comment,
+			artid:req.body.artid,
+			email:req.body.email,
+			ptime:req.body.ptime
+		}
+		//var sql = `insert into comm values("","${req.body.usrname}","${req.body.comment}","${req.body.artid}","${req.body.email}","${req.body.ptime}")`;
+		conn.query("insert into comm set ?",post,function(err,rs){
 			if(err) res.send(err.message);
 			else{res.send("ok");}		
 		})	

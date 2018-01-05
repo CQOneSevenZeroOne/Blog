@@ -8,11 +8,15 @@ module.exports = function(app){
 	app.post("/addArtical",function(req,res){
 		res.append("Access-Control-Allow-Origin","*");
 		var data = req.body;
-		console.log(data);
-		var sql = `insert into article (title,cont,author,ptime,catname,contt)
-		values
-		('${data.title}','${data.cont}','${data.author}','${data.ptime}','${data.catname}','${data.contt}')`;
-		conn.query(sql,function(err,rs){
+		var post = {
+			title:data.title,
+			cont:data.cont,
+			author:data.author,
+			ptime:data.ptime,
+			catname:data.catname,
+			contt:data.contt
+		}
+		conn.query("insert into article set ?",post,function(err,rs){
 			if(err) res.send(err.message);
 			else{
 				res.send("ok");
